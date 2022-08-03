@@ -13,7 +13,6 @@ const counterSlice = createSlice({
   initialState,
   reducers: {
     addBy: (state, action) => {
-      console.log(action);
       state.value += action.payload;
     },
     reduceBy: (state, action) => {

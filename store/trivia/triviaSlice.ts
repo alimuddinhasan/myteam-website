@@ -15,8 +15,7 @@ const triviaSlice = createSlice({
   name: "trivia",
   initialState,
   reducers: {
-    updateTrivia: (state, action) => {
-      console.log(action);
+    updateTrivia: (state, action: PayloadAction<INumberTrivia>) => {
       state.number = action.payload.number;
       state.trivia = action.payload.trivia;
     },

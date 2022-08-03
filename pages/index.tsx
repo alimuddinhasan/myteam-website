@@ -32,11 +32,9 @@ export default function Home() {
 
   const submitHandler = handleSubmit(async (data) => {
     const trivia = await numberTriviaUsecase.getNumberTrivia(data.number);
-    console.log(trivia);
     dispatch(updateTrivia(trivia));
   });
-
-  console.log(trivia);
+  
   return (
     <div className='h-screen flex flex-col'>
       <Head>
