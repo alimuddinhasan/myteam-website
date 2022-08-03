@@ -7,6 +7,7 @@ import Joi from "joi";
 import numberTriviaUsecase from "domain/usecase/numberTrivia.usecase";
 import { addBy, reduceBy } from "store/counter/counterSlice";
 import { useForm } from "react-hook-form";
+import { updateTrivia } from "store/trivia/triviaSlice";
 
 const schema = Joi.object({
   number: Joi.number().required(),
@@ -18,6 +19,8 @@ interface IFormData {
 
 export default function Home() {
   const counter = useSelector((state: RootState) => state.counter.value);
+  const trivia = useSelector((state: RootState) => state.trivia);
+
   const dispatch = useDispatch();
   const {
     register,
@@ -30,7 +33,10 @@ export default function Home() {
   const submitHandler = handleSubmit(async (data) => {
     const trivia = await numberTriviaUsecase.getNumberTrivia(data.number);
     console.log(trivia);
+    dispatch(updateTrivia(trivia));
   });
+
+  console.log(trivia);
   return (
     <div className='h-screen flex flex-col'>
       <Head>
@@ -39,7 +45,7 @@ export default function Home() {
       </Head>
 
       <main className='flex-1 flex flex-col justify-center items-center gap-3'>
-        <h1 className='font-bold text-5xl'>Welcome to Next.js</h1>
+        {/* <h1 className='font-bold text-5xl'>Welcome to Next.js</h1>
         <h1 className='font-bold text-4xl'>Counter Base App!</h1>
         <h2 className='font-bold text-4xl text-blue-500'>{counter}</h2>
         <div className='flex flex-col justify-center gap-2 '>
@@ -55,7 +61,7 @@ export default function Home() {
           >
             Reduce by 5
           </button>
-        </div>
+        </div> */}
         <h1 className='font-bold text-4xl'>Number Trivia App!</h1>
         <form onSubmit={submitHandler} className='flex gap-3 items-start'>
           <div>
@@ -76,6 +82,9 @@ export default function Home() {
             Submit
           </button>
         </form>
+        <article className='mt-5'>
+          <p>{trivia.trivia}</p>
+        </article>
       </main>
 
       <footer className='h-24 w-full flex justify-center items-center'>
