@@ -1,11 +1,19 @@
 import Head from "next/head";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store";
+
+import numberTriviaUsecase from "domain/usecase/numberTrivia.usecase";
 import { addBy, reduceBy } from "store/counter/counterSlice";
 
 export default function Home() {
   const counter = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
+  useEffect(() => {
+    numberTriviaUsecase.getNumberTrivia(10).then((data) => {
+      console.log(data);
+    });
+  }, []);
   return (
     <div className='h-screen flex flex-col'>
       <Head>
