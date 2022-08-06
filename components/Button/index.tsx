@@ -1,5 +1,10 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
-export default function Button() {
-  return <div>Button</div>;
+interface IButtonProps {
+  label: string;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+export default function Button({ label, onClick }: IButtonProps) {
+  return <button onClick={onClick}>{label}</button>;
 }
