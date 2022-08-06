@@ -9,6 +9,7 @@ interface IButtonProps {
   label: string;
   color?: ButtonColor;
   isDisabled?: Boolean;
+  isFlat?: Boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -16,6 +17,7 @@ export default function Button({
   label,
   color = ButtonColor.primary,
   isDisabled,
+  isFlat,
   onClick,
 }: IButtonProps) {
   const generateButtonColorClasses = () => {
@@ -25,9 +27,16 @@ export default function Button({
     return "text-midnight-green bg-white enabled:hover:text-midnight-green enabled:hover:bg-rapture-blue enabled:hover:border-rapture-blue";
   };
 
+  const generateBorderClasses = () => {
+    if (!isFlat) {
+      return "border-2";
+    }
+    return "";
+  };
+
   return (
     <button
-      className={`${generateButtonColorClasses()} disabled:opacity-50 text-lg font-semibold lowercase border-2 p-3 rounded-l-full rounded-r-full`}
+      className={`${generateButtonColorClasses()} ${generateBorderClasses()} rounded-l-full rounded-r-full disabled:opacity-50 text-lg font-semibold lowercase p-3`}
       onClick={onClick}
       disabled={!!isDisabled}
     >
