@@ -22,7 +22,7 @@ describe("Button", () => {
     const button = render(<Button label='Label' />);
 
     expect(button.getByText("Label")).toHaveClass(
-      "text-white hover:text-midnight-green hover:bg-white"
+      "text-white enabled:hover:text-midnight-green enabled:hover:bg-white"
     );
   });
 
@@ -30,7 +30,7 @@ describe("Button", () => {
     const button = render(<Button label='Label' color={ButtonColor.primary} />);
 
     expect(button.getByText("Label")).toHaveClass(
-      "text-white hover:text-midnight-green hover:bg-white"
+      "text-white enabled:hover:text-midnight-green enabled:hover:bg-white"
     );
   });
 
@@ -40,7 +40,13 @@ describe("Button", () => {
     );
 
     expect(button.getByText("Label")).toHaveClass(
-      "text-midnight-green bg-white hover:text-midnight-green hover:bg-rapture-blue hover:border-rapture-blue"
+      "text-midnight-green bg-white enabled:hover:text-midnight-green enabled:hover:bg-rapture-blue enabled:hover:border-rapture-blue"
     );
+  });
+
+  it("should disable button", () => {
+    const button = render(<Button label='Label' isDisabled />);
+
+    expect(button.getByText("Label")).toBeDisabled();
   });
 });
