@@ -70,3 +70,15 @@ describe("Flat", () => {
     expect(button.getByText("Label")).not.toHaveClass("border-2");
   });
 });
+
+describe("Button with icon", () => {
+  it("should render Button with icon", () => {
+    const button = render(
+      <Button icon='test' isFlat dataTestid='button-with-icon' />
+    );
+    expect(button.getByTestId("button-with-icon")).not.toHaveClass(
+      "enabled:hover:bg-white"
+    );
+    expect(button.getByAltText("button-icon")).toBeInTheDocument();
+  });
+});
