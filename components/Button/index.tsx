@@ -6,21 +6,23 @@ export enum ButtonColor {
 }
 
 interface IButtonProps {
-  label?: string;
+  className?: string;
   color?: ButtonColor;
   icon?: string;
   isDisabled?: Boolean;
   isFlat?: Boolean;
+  label?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
   dataTestid?: string;
 }
 
 export default function Button({
-  label,
+  className = "",
   color = ButtonColor.primary,
   icon,
   isDisabled,
   isFlat,
+  label,
   onClick,
   dataTestid,
 }: IButtonProps) {
@@ -44,7 +46,7 @@ export default function Button({
 
   return (
     <button
-      className={`${generateButtonColorClasses()} ${generateBorderClasses()} rounded-l-full rounded-r-full disabled:opacity-50 text-lg font-semibold lowercase p-3`}
+      className={`${generateButtonColorClasses()} ${generateBorderClasses()} rounded-l-full rounded-r-full disabled:opacity-50 text-lg font-semibold lowercase p-3 ${className}`}
       onClick={onClick}
       disabled={!!isDisabled}
       data-testid={dataTestid}
