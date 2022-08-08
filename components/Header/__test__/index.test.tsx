@@ -10,5 +10,7 @@ describe("Header", () => {
     expect(header.getByText("home")).toBeInTheDocument();
     expect(header.getByText("about")).toBeInTheDocument();
     expect(header.getByText("contact us")).toBeInTheDocument();
+    expect(header.getByTestId("title")).toBeInTheDocument();
+    expect(header.getByTestId("description")).toBeInTheDocument();
   });
 });
