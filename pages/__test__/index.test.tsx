@@ -2,9 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Home from "..";
 
 describe("Home", () => {
-  it.skip("should render Home screen", () => {
+  it("should render Home screen", () => {
     render(<Home />);
 
-    expect(screen.getByText("Homepage"));
+    expect(screen.getByRole("header")).toBeInTheDocument();
+    expect(screen.getByRole("footer")).toBeInTheDocument();
+    expect(screen.getByRole("get-started")).toBeInTheDocument();
   });
 });

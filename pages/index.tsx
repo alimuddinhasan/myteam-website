@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import GetStarted from "@/components/GetStarted";
 import Header from "@/components/Header";
 import Head from "next/head";
 import { Fragment } from "react";
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+      <GetStarted />
       <Footer />
     </Fragment>
   );

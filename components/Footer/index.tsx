@@ -3,7 +3,7 @@ import Button from "../Button";
 
 export default function Footer() {
   return (
-    <footer className='bg-dark-green py-10 '>
+    <footer className='bg-dark-green py-10 ' role='footer'>
       <div className='max-w-5xl flex flex-col items-center justify-center gap-5'>
         <img src='assets/logo.svg' className='w-24' alt='myteam-logo' />
         <div className='flex'>
