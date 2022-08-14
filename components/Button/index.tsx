@@ -50,7 +50,7 @@ export default function Button({
 
   return (
     <button
-      className={`${generateButtonColorClasses()} ${generateBorderClasses()} rounded-l-full rounded-r-full disabled:opacity-50 text-lg font-semibold lowercase p-3 ${className}`}
+      className={`${generateButtonColorClasses()} ${generateBorderClasses()} rounded-l-full rounded-r-full disabled:opacity-50 text-lg font-semibold lowercase py-3 px-7 ${className}`}
       onClick={onClick}
       disabled={!!isDisabled}
       data-testid={dataTestid}
