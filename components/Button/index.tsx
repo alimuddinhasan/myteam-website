@@ -3,6 +3,7 @@ import React, { MouseEventHandler } from "react";
 export enum ButtonColor {
   primary,
   secondary,
+  dark
 }
 
 interface IButtonProps {
@@ -27,12 +28,15 @@ export default function Button({
   dataTestid,
 }: IButtonProps) {
   const generateButtonColorClasses = () => {
+
     if (color === ButtonColor.primary) {
       let classes = "text-white enabled:hover:text-midnight-green";
       if (!icon) {
         classes += " enabled:hover:bg-white";
       }
       return classes;
+    } else if (color === ButtonColor.dark) {
+      return "text-dark-green bg-light-coral enabled:hover:text-light-coral border-dark-green enabled:hover:bg-dark-green enabled:hover:border-dark-green"
     }
     return "text-midnight-green bg-white enabled:hover:text-midnight-green enabled:hover:bg-rapture-blue enabled:hover:border-rapture-blue";
   };

@@ -42,6 +42,17 @@ describe("Button", () => {
     expect(button.getByText("Label")).toHaveClass("border-2");
   });
 
+  it("should render button with dark color", () => {
+    const button = render(
+      <Button label='Label' color={ButtonColor.dark} />
+    );
+
+    expect(button.getByText("Label")).toHaveClass(
+      "text-dark-green bg-light-coral enabled:hover:text-light-coral border-dark-green enabled:hover:bg-dark-green enabled:hover:border-dark-green"
+    );
+    expect(button.getByText("Label")).toHaveClass("border-2");
+  });
+
   it("should disable button", () => {
     const button = render(<Button label='Label' isDisabled />);
 
