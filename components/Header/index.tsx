@@ -3,7 +3,10 @@ import Button from "../Button";
 
 export default function Header() {
   return (
-    <header className='flex flex-col justify-center bg-midnight-green pt-10 px-5' role="header">
+    <header
+      className='flex flex-col justify-center bg-midnight-green pt-10 px-5'
+      role='header'
+    >
       <div className='grow flex justify-between items-center max-w-5xl'>
         <div className='flex items-center'>
           <img src='assets/logo.svg' className='mr-5' alt='myteam-logo' />
