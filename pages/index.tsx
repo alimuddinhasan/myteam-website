@@ -13,6 +13,18 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
+      <section className='bg-sacramento-state-green overflow-hidden'>
+        <img
+          src='/assets/bg-pattern-home-3.svg'
+          alt='bg-featured'
+          className='float-right h-[244px] w-[200px] translate-x-1/2'
+        />
+        <div className='flex flex-col justify-center max-w-5xl gap-8 px-5 py-14'>
+          <h1 className='text-2xl font-bold text-white'>
+            Build &amp; manage distributed teams like no one else.
+          </h1>
+        </div>
+      </section>
       <section className='bg-deep-jungle-green py-36 px-5 bg-[url("/assets/bg-pattern-home-4-about-3.svg"),_url("/assets/bg-pattern-home-5.svg")] bg-no-repeat bg-[position:left_top,_right_bottom]'>
         <div className='flex flex-col justify-center max-w-5xl gap-8'>
           <h1 className='font-bold text-2xl text-center text-white'>
@@ -23,14 +35,14 @@ export default function Home() {
             review='We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!'
             name='Aiysha Reese'
             jobTitle='Founder of Manage'
-            avatar="assets/avatar-kady.jpg"
+            avatar='assets/avatar-kady.jpg'
           />
 
           <Review
             review='We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!'
             name='Aiysha Reese'
             jobTitle='Founder of Manage'
-            avatar="assets/avatar-kady.jpg"
+            avatar='assets/avatar-kady.jpg'
           />
         </div>
       </section>
