@@ -21,6 +21,7 @@ export default function Home() {
           className='float-right h-[244px] w-[200px] translate-x-1/2'
         />
         <div className='flex flex-col justify-center max-w-5xl gap-8 px-5 py-14'>
+          <hr className="w-12 border-2 border-light-coral" data-testid="h-line" />
           <h1 className='text-2xl font-bold text-white'>
             Build &amp; manage distributed teams like no one else.
           </h1>

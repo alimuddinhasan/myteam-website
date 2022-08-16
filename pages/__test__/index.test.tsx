@@ -15,7 +15,7 @@ describe("Home", () => {
     it("should render Review section", () => {
       const home = render(<Home />);
 
-      expect(home.getByText(/Delivering real results/));
+      expect(home.getByText(/Delivering real results/)).toBeInTheDocument();
     });
   });
 
@@ -23,7 +23,8 @@ describe("Home", () => {
     it("should render Featured section", () => {
       const home = render(<Home />);
 
-      expect(home.getByText(/manage distributed teams/));
+      expect(home.getByText(/manage distributed teams/)).toBeInTheDocument();
+      expect(home.getByTestId("h-line")).toBeInTheDocument();
     });
   });
 });
