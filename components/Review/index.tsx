@@ -9,7 +9,7 @@ interface IHomeProps {
 
 export default function Review({ avatar, jobTitle, name, review }: IHomeProps) {
   return (
-    <div className='flex flex-col items-center text-white pt-9 bg-[url("/assets/icon-quotes.svg")] bg-no-repeat bg-top gap-5'>
+    <div className='flex flex-col items-center text-white pt-9 bg-[url("/assets/icon-quotes.svg")] bg-no-repeat bg-top gap-5 max-w-xl'>
       <p className='text-center font-semibold text-xs leading-6'>"{review}"</p>
       <div className='flex flex-col items-center'>
         <h2 className='font-bold text-sm text-rapture-blue'>{name}</h2>
