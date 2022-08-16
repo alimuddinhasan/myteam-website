@@ -9,8 +9,8 @@ export default function GetStarted() {
       role='get-started'
     >
       <Container className="py-20">
-        <div className='flex flex-col items-center gap-5'>
-          <h1 className='font-bold text-2xl text-dark-green text-center'>
+        <div className='flex flex-col sm:flex-row sm:justify-around items-center gap-5'>
+          <h1 className='font-bold text-2xl lg:text-5xl text-dark-green text-center'>
             Ready to get started?
           </h1>
           <Button
