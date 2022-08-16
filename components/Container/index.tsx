@@ -5,5 +5,5 @@ interface IContainerProps {
 }
 
 export default function Container({ children }: IContainerProps) {
-  return <div>{children}</div>;
+  return <div className="max-w-6xl w-screen">{children}</div>;
 }
