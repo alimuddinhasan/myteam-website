@@ -43,9 +43,7 @@ describe("Button", () => {
   });
 
   it("should render button with dark color", () => {
-    const button = render(
-      <Button label='Label' color={ButtonColor.dark} />
-    );
+    const button = render(<Button label='Label' color={ButtonColor.dark} />);
 
     expect(button.getByText("Label")).toHaveClass(
       "text-dark-green bg-light-coral enabled:hover:text-light-coral border-dark-green enabled:hover:bg-dark-green enabled:hover:border-dark-green"
@@ -64,10 +62,11 @@ describe("Flat", () => {
   it("should render default flat Button", () => {
     const button = render(<Button label='Label' isFlat />);
 
-    expect(button.getByText("Label")).toHaveClass(
+    const element = button.getByText("Label");
+    expect(element).toHaveClass(
       "text-white enabled:hover:text-midnight-green enabled:hover:bg-white"
     );
-    expect(button.getByText("Label")).not.toHaveClass("border-2");
+    expect(element).not.toHaveClass("border-2 py-3 px-7");
   });
 
   it("should render secondary flat Button", () => {
@@ -75,10 +74,11 @@ describe("Flat", () => {
       <Button label='Label' color={ButtonColor.secondary} isFlat />
     );
 
-    expect(button.getByText("Label")).toHaveClass(
+    const element = button.getByText("Label");
+    expect(element).toHaveClass(
       "text-midnight-green bg-white enabled:hover:text-midnight-green enabled:hover:bg-rapture-blue enabled:hover:border-rapture-blue"
     );
-    expect(button.getByText("Label")).not.toHaveClass("border-2");
+    expect(element).not.toHaveClass("border-2 py-3 px-7");
   });
 });
 
