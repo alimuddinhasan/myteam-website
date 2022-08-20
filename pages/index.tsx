@@ -1,20 +1,11 @@
+import BaseScreen from "@/components/BaseScreen";
 import FeaturedItem from "@/components/FeaturedItem";
-import Footer from "@/components/Footer";
-import GetStarted from "@/components/GetStarted";
-import Header from "@/components/Header";
 import Review from "@/components/Review";
-import Head from "next/head";
-import { Fragment } from "react";
 import { Container } from "../components";
 
 export default function Home() {
   return (
-    <Fragment>
-      <Head>
-        <title>Frontend Mentor | myteam website challenge - Homepage</title>
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <Header />
+    <BaseScreen pageTitle='Frontend Mentor | myteam website challenge - Homepage'>
       <section className='bg-sacramento-state-green overflow-hidden '>
         <img
           src='/assets/bg-pattern-home-3.svg'
@@ -32,7 +23,7 @@ export default function Home() {
                 Build &amp; manage distributed teams like no one else.
               </h1>
             </div>
-            <div className="flex flex-col gap-8 mt-16">
+            <div className='flex flex-col gap-8 mt-16'>
               <FeaturedItem
                 title='Experienced Individuals'
                 description='Our network is made up of highly experienced professionals who are passionate about what they do.'
@@ -88,8 +79,6 @@ export default function Home() {
           </div>
         </Container>
       </section>
-      <GetStarted />
-      <Footer />
-    </Fragment>
+    </BaseScreen>
   );
 }
