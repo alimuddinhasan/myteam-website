@@ -1,3 +1,4 @@
+import FeaturedItem from "@/components/FeaturedItem";
 import Footer from "@/components/Footer";
 import GetStarted from "@/components/GetStarted";
 import Header from "@/components/Header";
@@ -14,18 +15,47 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <section className='bg-sacramento-state-green overflow-hidden'>
+      <section className='bg-sacramento-state-green overflow-hidden '>
         <img
           src='/assets/bg-pattern-home-3.svg'
           alt='bg-featured'
           className='float-right h-[244px] w-[200px] translate-x-1/2'
         />
-        <div className='flex flex-col justify-center max-w-5xl gap-8 px-5 py-14'>
-          <hr className="w-12 border-2 border-light-coral" data-testid="h-line" />
-          <h1 className='text-2xl font-bold text-white'>
-            Build &amp; manage distributed teams like no one else.
-          </h1>
-        </div>
+        <Container>
+          <div className='px-5 py-10'>
+            <div className='flex flex-col justify-center max-w-5xl gap-8'>
+              <hr
+                className='w-12 border-2 border-light-coral'
+                data-testid='h-line'
+              />
+              <h1 className='text-2xl font-bold text-white'>
+                Build &amp; manage distributed teams like no one else.
+              </h1>
+            </div>
+            <div className="flex flex-col gap-8 mt-16">
+              <FeaturedItem
+                title='Experienced Individuals'
+                description='Our network is made up of highly experienced professionals who are passionate about what they do.'
+                icon='assets/icon-person.svg'
+              />
+              <FeaturedItem
+                title='Experienced Individuals'
+                description='Our network is made up of highly experienced professionals who are passionate about what they do.'
+                icon='assets/icon-person.svg'
+              />
+              <FeaturedItem
+                title='Experienced Individuals'
+                description='Our network is made up of highly experienced professionals who are passionate about what they do.'
+                icon='assets/icon-person.svg'
+              />
+              <FeaturedItem
+                title='Experienced Individuals'
+                description='Our network is made up of highly experienced professionals who are passionate about what they do.'
+                icon='assets/icon-person.svg'
+              />
+            </div>
+          </div>
+        </Container>
       </section>
       <section className='bg-deep-jungle-green py-36 px-5 bg-[url("/assets/bg-pattern-home-4-about-3.svg"),_url("/assets/bg-pattern-home-5.svg")] bg-no-repeat bg-[position:left_top,_right_bottom] flex justify-center'>
         <Container>
