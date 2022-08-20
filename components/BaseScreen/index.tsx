@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, { Fragment, ReactNode } from "react";
 import Footer from "../Footer";
 import GetStarted from "../GetStarted";
-import Header from "../Header";
+import Navbar from "../Navbar";
 
 interface IBaseScreenProps {
   pageTitle: string;
@@ -15,7 +15,7 @@ export default function BaseScreen({ children, pageTitle }: IBaseScreenProps) {
         <title>{pageTitle}</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <Header />
+      <Navbar />
       {children}
       <GetStarted />
       <Footer />

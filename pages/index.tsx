@@ -1,11 +1,12 @@
 import BaseScreen from "@/components/BaseScreen";
 import FeaturedItem from "@/components/FeaturedItem";
 import Review from "@/components/Review";
-import { Container } from "../components";
+import { Container, Header } from "../components";
 
 export default function Home() {
   return (
     <BaseScreen pageTitle='Frontend Mentor | myteam website challenge - Homepage'>
+      <Header />
       <section className='bg-sacramento-state-green overflow-hidden '>
         <img
           src='/assets/bg-pattern-home-3.svg'
