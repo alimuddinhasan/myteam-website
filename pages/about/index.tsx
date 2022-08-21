@@ -32,13 +32,23 @@ export default function Home() {
           </div>
         </Container>
       </article>
-      <section role='directors' className='bg-deep-jungle-green'>
+      <section role='directors' className='bg-deep-jungle-green relative overflow-hidden'>
+        <img
+          src='/assets/bg-pattern-about-2-contact-1.svg'
+          alt='bg-top-left'
+          className='absolute left-0 -translate-x-1/2 -translate-y-1/2 md:translate-y-0'
+        />
+        <img
+          src='/assets/bg-pattern-home-4-about-3.svg'
+          alt='bg-bottom-right'
+          className='absolute right-0 bottom-0'
+        />
         <Container>
-          <div className='flex flex-col items-center gap-5 px-5 py-10'>
+          <div className='flex flex-col items-center gap-10 px-5 py-24'>
             <h1 className='text-2xl font-bold text-white'>
               Meet the directors
             </h1>
-            <div className="self-stretch grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-3xl w-full'>
               <Director
                 avatar='/assets/avatar-nikita.jpg'
                 name='Nikita Marks'
