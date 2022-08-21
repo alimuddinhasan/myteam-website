@@ -1,5 +1,6 @@
 import BaseScreen from "@/components/BaseScreen";
 import Container from "@/components/Container";
+import Director from "@/components/Director";
 
 export default function Home() {
   return (
@@ -31,6 +32,42 @@ export default function Home() {
           </div>
         </Container>
       </article>
+      <section role='directors' className='bg-deep-jungle-green'>
+        <Container>
+          <div className='flex flex-col gap-5 items-stretch px-5'>
+            <Director
+              avatar='/assets/avatar-nikita.jpg'
+              name='Nikita Marks'
+              positon='Founder & CEO'
+              quote='Deserunt magna incididunt voluptate fugiat deserunt amet laboris nostrud consectetur eu proident.'
+              socials={{
+                linkedin: "https://www.linkedin.com",
+                twitter: "https://www.twitter.com",
+              }}
+            />
+            <Director
+              avatar='/assets/avatar-nikita.jpg'
+              name='Nikita Marks'
+              positon='Founder & CEO'
+              quote='Deserunt magna incididunt voluptate fugiat deserunt amet laboris nostrud consectetur eu proident.'
+              socials={{
+                linkedin: "https://www.linkedin.com",
+                twitter: "https://www.twitter.com",
+              }}
+            />
+            <Director
+              avatar='/assets/avatar-nikita.jpg'
+              name='Nikita Marks'
+              positon='Founder & CEO'
+              quote='Deserunt magna incididunt voluptate fugiat deserunt amet laboris nostrud consectetur eu proident.'
+              socials={{
+                linkedin: "https://www.linkedin.com",
+                twitter: "https://www.twitter.com",
+              }}
+            />
+          </div>
+        </Container>
+      </section>
     </BaseScreen>
   );
 }
