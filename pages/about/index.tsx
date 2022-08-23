@@ -2,9 +2,9 @@ import BaseScreen from "@/components/BaseScreen";
 import Container from "@/components/Container";
 import Director from "@/components/Director";
 
-export default function Home() {
+export default function About() {
   return (
-    <BaseScreen pageTitle='Frontend Mentor | myteam website challenge - Homepage'>
+    <BaseScreen pageTitle='Frontend Mentor | myteam website challenge - About'>
       <article
         className='flex justify-center bg-midnight-green px-5'
         role='header'
