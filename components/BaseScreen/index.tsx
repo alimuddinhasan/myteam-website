@@ -7,8 +7,13 @@ import Navbar from "../Navbar";
 interface IBaseScreenProps {
   pageTitle: string;
   children?: ReactNode | undefined;
+  showGetStarted?: boolean | undefined;
 }
-export default function BaseScreen({ children, pageTitle }: IBaseScreenProps) {
+export default function BaseScreen({
+  children,
+  pageTitle,
+  showGetStarted = true,
+}: IBaseScreenProps) {
   return (
     <Fragment>
       <Head>
@@ -17,7 +22,7 @@ export default function BaseScreen({ children, pageTitle }: IBaseScreenProps) {
       </Head>
       <Navbar />
       {children}
-      <GetStarted />
+      {showGetStarted && <GetStarted />}
       <Footer />
     </Fragment>
   );
