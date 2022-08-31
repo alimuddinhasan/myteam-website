@@ -10,7 +10,15 @@ export default function Contact() {
       pageTitle="Frontend Mentor | myteam website challenge - Contact"
       showGetStarted={false}
     >
-      <section role="contact" className="bg-midnight-green flex justify-center">
+      <section
+        role="contact"
+        className="bg-midnight-green flex justify-center relative overflow-hidden"
+      >
+        <img
+          src="/assets/bg-pattern-contact-2.svg"
+          alt="bg-top-left"
+          className="absolute right-0 bottom-0 translate-x-1/2 translate-y-1/2"
+        />
         <Container className="py-24">
           <div className="flex flex-col items-center gap-5 px-5 mb-10">
             <h1 className="text-4xl font-bold text-white">Contact</h1>
