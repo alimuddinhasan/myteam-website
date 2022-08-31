@@ -18,16 +18,22 @@ export default function About() {
               >
                 About
               </h1>
-              <p
-                className="font-semibold text-base lg:text-sm text-center lg:text-left text-white"
-                data-testid="description"
-              >
-                We help companies build dynamic teams made up of top global
-                talent. Using our network of passionate professionals we drive
-                innovation and deliver incredible outcomes. Talented, diverse
-                teams shape the best products and experiences. We’ll bring those
-                teams to you.
-              </p>
+              <div className="flex flex-col gap-8 lg:pl-28">
+                <hr
+                  className="w-12 border-2 border-light-coral hidden lg:block"
+                  data-testid="h-line"
+                />
+                <p
+                  className="font-semibold text-base lg:text-sm text-center lg:text-left text-white"
+                  data-testid="description"
+                >
+                  We help companies build dynamic teams made up of top global
+                  talent. Using our network of passionate professionals we drive
+                  innovation and deliver incredible outcomes. Talented, diverse
+                  teams shape the best products and experiences. We’ll bring
+                  those teams to you.
+                </p>
+              </div>
             </div>
           </div>
         </Container>
