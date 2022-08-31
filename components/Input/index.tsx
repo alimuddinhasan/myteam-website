@@ -50,7 +50,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, IInputProps>(
         <div className={`${getBorderColor()} h-24 border-b-2 px-3`}>
           <textarea
             placeholder={label}
-            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none w-full`}
+            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none w-full resize-none`}
             ref={inputRef}
             {...rest}
           ></textarea>
