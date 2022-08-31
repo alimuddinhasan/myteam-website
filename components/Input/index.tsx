@@ -34,7 +34,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, IInputProps>(
       return (
         <div className={`${getBorderColor()} h-11 border-b-2 px-3`}>
           <input
-            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none`}
+            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none w-full`}
             placeholder={label}
             type="text"
             ref={inputRef}
@@ -47,10 +47,10 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, IInputProps>(
     const buildInputTextarea = () => {
       const inputRef = ref as ForwardedRef<HTMLTextAreaElement>;
       return (
-        <div className={`${getBorderColor()} h-11 border-b-2 px-3`}>
+        <div className={`${getBorderColor()} h-24 border-b-2 px-3`}>
           <textarea
             placeholder={label}
-            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none`}
+            className={`${getFieldColor()} bg-transparent placeholder-opacity-60 font-semibold text-xs outline-none w-full`}
             ref={inputRef}
             {...rest}
           ></textarea>
