@@ -29,9 +29,9 @@ export default function Button({
 }: IButtonProps) {
   const generateButtonColorClasses = () => {
     if (color === ButtonColor.primary) {
-      let classes = "text-white enabled:hover:text-midnight-green";
-      if (!icon) {
-        classes += " enabled:hover:bg-white";
+      let classes = "text-white ";
+      if (!icon && !isFlat) {
+        classes += "enabled:hover:text-midnight-green enabled:hover:bg-white";
       }
       return classes;
     } else if (color === ButtonColor.dark) {
@@ -62,7 +62,7 @@ export default function Button({
       disabled={!!isDisabled}
       data-testid={dataTestid}
     >
-      {icon ? <img src={icon} alt='button-icon' /> : label}
+      {icon ? <img src={icon} alt="button-icon" /> : label}
     </button>
   );
 }

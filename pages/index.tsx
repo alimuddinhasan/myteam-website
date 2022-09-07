@@ -8,11 +8,6 @@ export default function Home() {
     <BaseScreen pageTitle="Frontend Mentor | myteam website challenge - Homepage">
       <Header />
       <section className="bg-sacramento-state-green overflow-hidden flex justify-center">
-        {/*<img*/}
-        {/*  src="/assets/bg-pattern-home-3.svg"*/}
-        {/*  alt="bg-featured"*/}
-        {/*  className="float-right h-[244px] w-[200px] translate-x-1/2"*/}
-        {/*/>*/}
         <Container>
           <div className="px-5 py-10 lg:py-24 flex flex-col lg:flex-row items-center gap-8 lg:items-start">
             <div className="lg:basis-1/2 flex flex-col justify-center max-w-5xl gap-8">
