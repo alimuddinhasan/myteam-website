@@ -1,11 +1,11 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import GetStarted from "..";
 
 describe("GetStarted", () => {
   it("should render Get Started component", () => {
-    const getStarted = render(<GetStarted />);
+    render(<GetStarted />);
 
-    expect(getStarted.getByText(/Ready to get started/)).toBeInTheDocument();
-    expect(getStarted.getByText("contact us")).toBeInTheDocument();
+    expect(screen.getByText(/Ready to get started/)).toBeInTheDocument();
+    expect(screen.getByText("contact us")).toBeInTheDocument();
   });
 });

@@ -10,7 +10,7 @@ export default function About() {
         role="header"
       >
         <Container>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center ">
             <div className="flex flex-col lg:flex-row items-center lg:items-stretch py-20 max-w-md lg:max-w-none gap-5">
               <h1
                 className="text-white text-6xl font-bold text-center"

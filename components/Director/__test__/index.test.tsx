@@ -1,49 +1,49 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Director from "..";
 import userEvent from "@testing-library/user-event";
 
 describe("Director", () => {
   it("should render Director component", () => {
-    const director = render(
+    render(
       <Director
-        avatar='avatar'
-        name='name'
-        positon='position'
-        quote='quote'
+        avatar="avatar"
+        name="name"
+        positon="position"
+        quote="quote"
         socials={{ linkedin: "linkedin", twitter: "twitter" }}
       />
     );
-    expect(director.getByText("name")).toBeInTheDocument();
-    expect(director.getByText("position")).toBeInTheDocument();
-    expect(director.getByTestId("button-plus")).toBeInTheDocument();
+    expect(screen.getByText("name")).toBeInTheDocument();
+    expect(screen.getByText("position")).toBeInTheDocument();
+    expect(screen.getByTestId("button-plus")).toBeInTheDocument();
 
-    const directorAvatar = director.getByAltText("director-avatar");
+    const directorAvatar = screen.getByAltText("director-avatar");
     expect(directorAvatar).toBeInTheDocument();
     expect(directorAvatar).toHaveAttribute("src", "avatar");
 
-    expect(director.queryByText("quote")).toBeNull();
+    expect(screen.queryByText("quote")).toBeNull();
   });
 
   it("should show quote", async () => {
-    const director = render(
+    render(
       <Director
-        avatar='avatar'
-        name='name'
-        positon='position'
-        quote='quote'
+        avatar="avatar"
+        name="name"
+        positon="position"
+        quote="quote"
         socials={{ linkedin: "linkedin", twitter: "twitter" }}
       />
     );
 
-    expect(director.getByText("position")).toBeInTheDocument();
-    expect(director.getByAltText("director-avatar")).toBeInTheDocument();
-    expect(director.queryByText(/quote/)).toBeNull();
+    expect(screen.getByText("position")).toBeInTheDocument();
+    expect(screen.getByAltText("director-avatar")).toBeInTheDocument();
+    expect(screen.queryByText(/quote/)).toBeNull();
 
-    const buttonPlus = director.getByTestId("button-plus");
+    const buttonPlus = screen.getByTestId("button-plus");
 
     await userEvent.click(buttonPlus);
-    expect(director.getByText(/quote/)).toBeInTheDocument();
-    expect(director.queryByText("position")).toBeNull();
-    expect(director.queryByAltText("director-avatar")).toBeNull();
+    expect(screen.getByText(/quote/)).toBeInTheDocument();
+    expect(screen.queryByText("position")).toBeNull();
+    expect(screen.queryByAltText("director-avatar")).toBeNull();
   });
 });

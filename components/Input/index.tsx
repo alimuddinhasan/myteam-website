@@ -65,4 +65,7 @@ const Input = forwardRef<HTMLInputElement | HTMLTextAreaElement, IInputProps>(
     }
   }
 );
+
+Input.displayName = "Input";
+
 export default Input;

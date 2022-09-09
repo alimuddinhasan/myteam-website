@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Home from "..";
+import Home from "../index.page";
 
 describe("Home", () => {
   it("should render Home screen", () => {
@@ -13,18 +13,18 @@ describe("Home", () => {
   // TODO: add coverage of Review section
   describe("Review section", () => {
     it("should render Review section", () => {
-      const home = render(<Home />);
+      render(<Home />);
 
-      expect(home.getByText(/Delivering real results/)).toBeInTheDocument();
+      expect(screen.getByText(/Delivering real results/)).toBeInTheDocument();
     });
   });
 
   describe("Featured section", () => {
     it("should render Featured section", () => {
-      const home = render(<Home />);
+      render(<Home />);
 
-      expect(home.getByText(/manage distributed teams/)).toBeInTheDocument();
-      expect(home.getByTestId("h-line")).toBeInTheDocument();
+      expect(screen.getByText(/manage distributed teams/)).toBeInTheDocument();
+      expect(screen.getByTestId("h-line")).toBeInTheDocument();
     });
   });
 });
