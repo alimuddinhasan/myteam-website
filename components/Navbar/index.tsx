@@ -21,7 +21,7 @@ export default function Navbar() {
                   isFlat
                 />
               </Link>
-              <Link href="/index.page" passHref>
+              <Link href="/index" passHref>
                 <Button
                   className="hidden sm:inline-block"
                   label="about"
@@ -34,7 +34,7 @@ export default function Navbar() {
               icon="assets/icon-hamburger.svg"
               isFlat
             />
-            <Link href="/index.page" passHref>
+            <Link href="/index" passHref>
               <Button className="hidden sm:inline-block" label="contact us" />
             </Link>
           </div>
